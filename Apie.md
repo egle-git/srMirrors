@@ -18,7 +18,7 @@ pasidaryti gana painus.
 <br>
 
 Ypač, kai vaizduojamas šviesos judėjimas tarp veidrodžių, pačių veidrodžių
-nerodant
+nerodant:
 
 <img src="Doc/TGajdosik-spacetime-diagram.png" alt="" />
 
@@ -27,17 +27,21 @@ Bandydamas suprasti, kaip atrodo šviesos judėjimas 3D diagramoje, buitiškai
 pasirašiau programėlę panaudodamas ROOT bibliotekas.
 
 Pirminis, prototipinis kodas - `drawMirror.C` - vėliau virto kiek pažangesniu
-kodu `drawMirror2.C`. Kodai leidžia pavaizduoti šviesos judėjimą laikrodžiuose,
-vaizduojant stovintį stebėtoją ir judančio stebėtoją atskirai. Nebandžiau
+kodu `drawMirror2.C`. Pastarasis kodas vaizduoja šviesos judėjimą tarp
+veikėjo laikrodžio veidrodžių, kai veikėjas juda arba nejuda laboratorinėje
+atskaitos sistemoje. Nebandžiau
 suderinti stebėtojų laikrodžių - man norėjosi pamatyti kokiu būdu nepilname
 vaizdavime gali susidaryti įspūdis, kad šviesa juda $x$ kryptimi pirmyn-atgal.
 
 ROOT macro `drawMirror2` turi tris argumentus: laiko indeksą (`time_pos`), ar 
-reikia piešinėlius išsaugoti (`doSave`) ir ar laikrodis juda (`move`).
+reikia piešinėlius išsaugoti (`doSave`) ir ar laikrodį laikantis veikėjas
+juda (`move`).
 
 Iš pradžių tiesiog norėjau išsaugoti piešinėlius, tai pasirašiau `bash`
 skriptą `run2.sh`, o paskui supratau, kad galiu pagaminti ir animacinį `gif`
-paveikslėlį, tad parašiau `anim.sh`.
+paveikslėlį, tad parašiau `anim.sh`. Pastarasis skriptas yra parengtas
+nejudančio veikėjo atvejui. Norėdami sujungti judančio veikėjo vaizdus į
+`gif`, turėtumėte sukurti adaptuotą skripto `anim.sh` versiją.
 
 Sėkmės išbandant.
 
